@@ -1,0 +1,1 @@
+$(SolutionDir)..\..\external_libs\$(Configuration)\
