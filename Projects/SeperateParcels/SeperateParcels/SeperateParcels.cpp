@@ -19,7 +19,7 @@ int main()
 	//string dir = "E:\\cpp_projects\\SeperateParcels\\test_images";
 	//string dir = "F:\\dualPackageDetectDemo\\all";
 	//string dir = "F:\\cpte_datasets\\Tailand_tag_detection_datasets\\20191204\\copy_m";
-	string dir = "F:\\20191227\\choose\\1121-abnormal";
+	string dir = "E:\\cpp_projects\\SeperateParcels\\test_images";
 	CommonFunc::getAllFilesNameInDir(dir, imagefiles, true, true);
 	for (int i = 0; i < imagefiles.size(); i++)
 	{
