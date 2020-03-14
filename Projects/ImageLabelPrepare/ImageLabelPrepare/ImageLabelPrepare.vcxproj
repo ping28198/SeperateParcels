@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{CABBF3DD-0848-480E-9913-316D3E7D5410}</ProjectGuid>
+    <ProjectGuid>{D50C5349-3BAD-4965-951C-917DAA1D0057}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>SeperateParcels</RootNamespace>
+    <RootNamespace>ImageLabelPrepare</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -52,7 +52,6 @@
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
-    <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -77,30 +76,16 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-<<<<<<< HEAD
-    <IncludePath>$(SolutionDir)..\..\external_include\opencv;$(SolutionDir)..\..\Source_include;$(SolutionDir)..\..\external_include\json;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
-    <LibraryPath>$(SolutionDir)..\..\external_libs\$(Configuration)\;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
-    <OutDir>$(SolutionDir)..\run_dir\</OutDir>
-=======
-    <IncludePath>$(SolutionDir)..\..\external_include\opencv;$(SolutionDir)..\..\Source_include;$(SolutionDir)..\..\external_include\json;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)\SeperateParcelsDLL</IncludePath>
-    <LibraryPath>$(SolutionDir)..\_run_dir\;$(SolutionDir)..\..\external_libs\$(Configuration)\;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
-    <OutDir>$(SolutionDir)..\_run_dir\</OutDir>
->>>>>>> 9a3079a1d6682893effa5be0f53962e8c00a3117
+    <IncludePath>$(SolutionDir)..\..\external_include\opencv;$(SolutionDir)..\..\source_include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)..\..\external_libs\$(Configuration)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-<<<<<<< HEAD
-    <IncludePath>$(SolutionDir)..\..\external_include\opencv;$(SolutionDir)..\..\Source_include;$(SolutionDir)..\..\external_include\json;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <IncludePath>$(SolutionDir)..\..\external_include\opencv;$(SolutionDir)..\..\source_include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)..\..\external_libs\$(Configuration)\;$(LibraryPath)</LibraryPath>
-    <OutDir>$(SolutionDir)..\run_dir\</OutDir>
-=======
-    <IncludePath>$(SolutionDir)..\..\external_include\opencv;$(SolutionDir)..\..\Source_include;$(SolutionDir)..\..\external_include\json;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)\SeperateParcelsDLL</IncludePath>
-    <LibraryPath>$(SolutionDir)..\_run_dir\;$(SolutionDir)..\..\external_libs\$(Configuration)\;$(LibraryPath)</LibraryPath>
-    <OutDir>$(SolutionDir)..\_run_dir\</OutDir>
->>>>>>> 9a3079a1d6682893effa5be0f53962e8c00a3117
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -130,7 +115,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opencv_world343d.lib;SeperateParcelsDLLd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opencv_world343d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -169,27 +154,24 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opencv_world343.lib;SeperateParcelsDLL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opencv_world343.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Source_include\base64.h" />
     <ClInclude Include="..\..\..\Source_include\CommonFunc.h" />
     <ClInclude Include="..\..\..\Source_include\ImageProcessFunc.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Source_include\base64.cpp" />
     <ClCompile Include="..\..\..\Source_include\CommonFunc.cpp" />
     <ClCompile Include="..\..\..\Source_include\ImageProcessFunc.cpp" />
-    <ClCompile Include="FindeSquare.cpp" />
+    <ClCompile Include="ImageLabelPrepare.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="SeperateParcels.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

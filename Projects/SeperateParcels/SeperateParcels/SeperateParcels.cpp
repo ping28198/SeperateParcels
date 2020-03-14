@@ -45,7 +45,11 @@ int testAlgorithm()
 	string dir = "F:\\dualPackageDetectDemo\\all_jpg";
 	//string dir = "F:\\dualPackageDetectDemo\\all";
 	//string dir = "F:\\cpte_datasets\\Tailand_tag_detection_datasets\\20191204\\copy_m";
+<<<<<<< HEAD
+	string dir = "E:\\cpp_projects\\SeperateParcels\\test_images";
+=======
 	//string dir = "F:\\20191227\\choose\\1121-abnormal";
+>>>>>>> 9a3079a1d6682893effa5be0f53962e8c00a3117
 	CommonFunc::getAllFilesNameInDir(dir, imagefiles, true, true);
 	for (int i = 0; i < imagefiles.size(); i++)
 	{
